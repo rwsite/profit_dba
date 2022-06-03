@@ -7,6 +7,13 @@ CREATE TABLE books (
    price decimal
 );
 
+CREATE TABLE publishers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title varchar(255) NOT NULL,
+    serial varchar(20),
+    address text
+);
+
 INSERT INTO books (title, year, author, genre, price)
 VALUES ('Сердце пармы', 2003, 'Алексей Викторович Иванов', 'Художественная литература', 250),
        ('Мартин Иден', 2021, 'Лондон Джек', 'Художественная литература', 230),
