@@ -2,7 +2,7 @@ CREATE DATABASE profit;
 SHOW DATABASES;
 USE profit;
 CREATE TABLE books (
-    id MEDIUMINT NOT NULL AUTO_INCREMENT,
+    id SERIAL,
     title varchar(255) NOT NULL,
     year int NOT NULL,
     author varchar(255) NOT NULL,
@@ -24,16 +24,6 @@ VALUES ('Сердце пармы', 2003, 'Алексей Викторович И
        ('Книга 2', 2022, 'Лондон Джек', 'Художественная литература', 230),
        ('Книга 1990', 1991, 'Лондон Джек', 'Художественная литература', 830),
        ('Война и мир.', 1965, 'Толстой Лев Николаевич', 'Историческая проза', 1080);
-
-CREATE TABLE publishers (
-    id MEDIUMINT NOT NULL AUTO_INCREMENT,
-    title varchar(255) NOT NULL,
-    year int NOT NULL,
-    author varchar(255) NOT NULL,
-    genre varchar(255),
-    price decimal,
-    PRIMARY KEY (id)
-);
 
 SELECT * FROM books;
 
